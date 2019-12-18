@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Lock</string>
+    <string name="tip">please enable the permission of lock</string>
 </resources>
