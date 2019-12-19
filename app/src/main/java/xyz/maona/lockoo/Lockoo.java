@@ -58,8 +58,6 @@ class Lockoo {
             Intent intent = new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS);
             if (fromStatusBar) {
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                String tip = context.getResources().getString(R.string.tip);
-                Toast.makeText(context, tip, Toast.LENGTH_SHORT).show();
             }
             context.startActivity(intent);
         }

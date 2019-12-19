@@ -1,4 +1,3 @@
 <resources>
     <string name="app_name">锁屏</string>
-    <string name="tip">请开启锁屏权限</string>
 </resources>
