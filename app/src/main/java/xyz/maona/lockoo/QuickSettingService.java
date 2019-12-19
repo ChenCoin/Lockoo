@@ -8,6 +8,6 @@ import android.service.quicksettings.TileService;
 public class QuickSettingService extends TileService {
     @Override
     public void onClick() {
-        new Lockoo(this, true).lock();
+        new Lockoo(this).lock();
     }
 }

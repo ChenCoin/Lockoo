@@ -7,20 +7,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.provider.Settings;
-import android.widget.Toast;
 
 class Lockoo {
 
     private Context context;
-    private boolean fromStatusBar = false;
 
     Lockoo(Context context) {
         this.context = context;
-    }
-
-    Lockoo(Context context, boolean fromStatusBar) {
-        this.context = context;
-        this.fromStatusBar = fromStatusBar;
     }
 
     void lock() {
@@ -56,9 +49,7 @@ class Lockoo {
             MyAccessibilityService.lock();
         } else {
             Intent intent = new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS);
-            if (fromStatusBar) {
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            }
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intent);
         }
     }
